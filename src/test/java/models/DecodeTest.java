@@ -15,4 +15,14 @@ public class DecodeTest {
         Decode testDecode = new Decode("abc", 1);
         assertEquals("abc", testDecode.getMsg());
     }
+    @Test
+    public void newDecode_getKey() {
+        Decode testDecode = new Decode("abc", 1);
+        assertEquals(1, testDecode.getKey());
+    }
+    @Test
+    public void newDecode_Encrypt_Message() {
+        Decode testEncode = new Decode("bcd", 1);
+        assertEquals("abc", testEncode.strDecrypt());
+    }
 }

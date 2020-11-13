@@ -16,4 +16,14 @@ public class EncodeTest {
         Encode testEncode = new Encode("abc", 1);
         assertEquals("abc", testEncode.getMsg());
     }
+    @Test
+    public void newEncode_getKey() {
+        Encode testEncode = new Encode("abc", 1);
+        assertEquals(1, testEncode.getKey());
+    }
+    @Test
+    public void newEncode_Encrypt_Message() {
+        Encode testEncode = new Encode("abc", 1);
+        assertEquals("bcd", testEncode.strEncrypt());
+    }
 }
