@@ -18,7 +18,9 @@ public class App {
             Encode EncodedStr = new Encode(sMsg,Key);
             Decode DecodedStr = new Decode(EncodedStr.strEncrypt(),Key);
             String EncryptedStr=String.format("Encrypted String: %s",EncodedStr.strEncrypt());
+            String InputStr=String.format("Input String: %s",sMsg);
             String DecryptedStr=String.format("Decrypted String: %s",DecodedStr.strDecrypt());
+            System.out.println(InputStr.toUpperCase());
             System.out.println(EncryptedStr.toUpperCase());
             System.out.println(DecryptedStr.toUpperCase());
         }
