@@ -25,4 +25,9 @@ public class DecodeTest {
         Decode testEncode = new Decode("bcd", 1);
         assertEquals("abc", testEncode.strDecrypt());
     }
+    @Test
+    public void newDecode_LessThan_A() {
+        Decode testEncode = new Decode("a", 1);
+        assertEquals("z", testEncode.strDecrypt());
+    }
 }

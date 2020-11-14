@@ -18,6 +18,16 @@ public class Encode {
     }
 
     static String getString(String cMessage, int cKey) {
-        return getString(cMessage, cKey);
+        String s = "";
+        int len = cMessage.length();
+        for(int x = 0; x < len; x++){
+            char c = (char)(cMessage.charAt(x) + cKey);
+            if (c > 'z') {
+                s += (char)(cMessage.charAt(x) + (26- cKey));
+            } else
+                s += (char)(cMessage.charAt(x) + cKey);
+        }
+        return s;
     }
+
 }

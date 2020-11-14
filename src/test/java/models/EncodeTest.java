@@ -6,7 +6,7 @@ import static org.junit.Assert.*;
 
 public class EncodeTest {
     @Test
-    public void newEncode_instantiatesCorrectly() {
+    public void newEncode_instantiatesCorrectly()throws Exception  {
         Encode testEncode = new Encode("abc", 1);
         assertEquals(true, testEncode instanceof Encode);
     }
@@ -25,5 +25,11 @@ public class EncodeTest {
     public void newEncode_Encrypt_Message() {
         Encode testEncode = new Encode("abc", 1);
         assertEquals("bcd", testEncode.strEncrypt());
+    }
+
+    @Test
+    public void newEncode_GreaterThan_Z() throws Exception {
+        Encode testEncode = new Encode("z", 1);
+        assertEquals("\u0093", testEncode.strEncrypt());
     }
 }
