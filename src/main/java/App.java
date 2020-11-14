@@ -9,7 +9,7 @@ public class App {
     public static void main(String[] args) {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("I'm Caesar cipher!");
-        System.out.println("Enter any string:");
+        System.out.println("Enter any string");
         try {
             String message = bufferedReader.readLine();
             System.out.println("Enter Shift Key(any number):");

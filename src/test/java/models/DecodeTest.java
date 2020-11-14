@@ -30,4 +30,9 @@ public class DecodeTest {
         Decode testEncode = new Decode("a", 1);
         assertEquals("z", testEncode.strDecrypt());
     }
+    @Test
+    public void newDecode_Empty_Space() {
+        Decode testEncode = new Decode(" ", 1);
+        assertEquals(" ", testEncode.strDecrypt());
+    }
 }

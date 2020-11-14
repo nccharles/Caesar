@@ -32,4 +32,9 @@ public class EncodeTest {
         Encode testEncode = new Encode("z", 1);
         assertEquals("a", testEncode.strEncrypt());
     }
+    @Test
+    public void newEncode_Empty_space() throws Exception {
+        Encode testEncode = new Encode(" ", 1);
+        assertEquals(" ", testEncode.strEncrypt());
+    }
 }
