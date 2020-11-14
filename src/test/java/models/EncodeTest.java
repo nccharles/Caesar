@@ -30,6 +30,6 @@ public class EncodeTest {
     @Test
     public void newEncode_GreaterThan_Z() throws Exception {
         Encode testEncode = new Encode("z", 1);
-        assertEquals("\u0093", testEncode.strEncrypt());
+        assertEquals("a", testEncode.strEncrypt());
     }
 }

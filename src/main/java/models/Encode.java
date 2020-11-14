@@ -23,7 +23,7 @@ public class Encode {
         for(int x = 0; x < len; x++){
             char c = (char)(cMessage.charAt(x) + cKey);
             if (c > 'z') {
-                s += (char)(cMessage.charAt(x) + (26- cKey));
+                s += (char)(cMessage.charAt(x) - (26- cKey));
             } else
                 s += (char)(cMessage.charAt(x) + cKey);
         }
