@@ -12,7 +12,7 @@ public class App {
         System.out.println("Enter any string or Type Exit");
         boolean Running=true;
         String regex = "^[a-zA-Z]+$";
-        String numReg="^[0-9]{1,2}+$";
+        String numReg="^[0-9]+$";
         while (Running) {
             try {
                 String message = bufferedReader.readLine();
@@ -45,7 +45,8 @@ public class App {
                     }else {
                         System.out.println("You entered invalid string, Please try another one!");
                     }
-                } } catch (IOException e) {
+                }
+            } catch (IOException e) {
                 e.printStackTrace();
             }
                 }
