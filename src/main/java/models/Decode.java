@@ -18,17 +18,17 @@ public class Decode {
         return getString(this.cMessage, this.cKey);
     }
     static String getString(String cMessage, int cKey) {
-        String s = "";
+        String ans = "";
         int len = cMessage.length();
         for(int x = 0; x < len; x++){
             char c = (char)(cMessage.charAt(x) - cKey);
             if(cMessage.charAt(x)==' '){
-                s += (char)(cMessage.charAt(x));
+                ans += (char)(cMessage.charAt(x));
             }else if (c < 'a') {
-                s += (char)(cMessage.charAt(x) + (26- cKey));
+                ans += (char)(cMessage.charAt(x) + (26- cKey));
             } else
-                s += (char)(cMessage.charAt(x) - cKey);
+                ans += (char)(cMessage.charAt(x) - cKey);
         }
-        return s;
+        return ans;
     }
 }
