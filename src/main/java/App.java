@@ -13,6 +13,7 @@ public class App {
         boolean Running=true;
         String regex = "^[a-zA-Z]+$";
         String numReg="^[0-9]+$";
+//        keep it running
         while (Running) {
             try {
                 String message = bufferedReader.readLine();
